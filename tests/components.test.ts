@@ -22,7 +22,7 @@ describe('Kalye 8 Minimal Landing Page', () => {
     expect(document.querySelector('#skills')).not.toBeNull();
     expect(document.querySelector('#play')).not.toBeNull();
     expect(document.querySelector('#booth')).not.toBeNull();
-    expect(document.querySelector('#scroll-rail')).not.toBeNull();
+    expect(document.querySelector('#scroll-rail')).toBeNull();
     expect(document.querySelector('#controls-strip')).not.toBeNull();
     expect(document.querySelectorAll('#play .rule-row')).toHaveLength(6);
 

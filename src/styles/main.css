@@ -113,40 +113,6 @@ a {
 }
 
 /* ==========================================================================
-   LEFT SCROLL RAIL
-   ========================================================================== */
-
-.scroll-rail {
-  position: fixed;
-  top: 50%;
-  left: clamp(18px, 2.6vw, 38px);
-  transform: translateY(-50%);
-  height: 140px;
-  z-index: 40;
-  pointer-events: none;
-}
-
-.scroll-rail__track {
-  position: relative;
-  width: 1px;
-  height: 100%;
-  background: rgba(245, 242, 235, 0.14);
-}
-
-.scroll-rail__dot {
-  position: absolute;
-  left: 50%;
-  top: var(--scroll-progress, 0%);
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--amber);
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 12px var(--amber), 0 0 24px rgba(229, 165, 58, 0.45);
-  transition: top 0.12s linear;
-}
-
-/* ==========================================================================
    HEADER
    ========================================================================== */
 
@@ -870,12 +836,6 @@ a {
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
-
-@media (max-width: 980px) {
-  .scroll-rail {
-    display: none;
-  }
-}
 
 @media (max-width: 900px) {
   .skills-grid {

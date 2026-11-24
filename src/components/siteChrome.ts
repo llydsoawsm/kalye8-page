@@ -1,18 +1,10 @@
 export function initSiteChrome(root: ParentNode = document): void {
   const header = root.querySelector<HTMLElement>('#site-header');
-  const scrollRail = root.querySelector<HTMLElement>('#scroll-rail');
   const navLinks = root.querySelectorAll<HTMLAnchorElement>('.site-nav__link');
   const revealNodes = root.querySelectorAll<HTMLElement>('.reveal');
 
   const updateScroll = () => {
-    const y = window.scrollY;
-    header?.classList.toggle('is-scrolled', y > 36);
-
-    if (scrollRail) {
-      const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-      const pct = Math.min(100, Math.max(0, (y / maxScroll) * 100));
-      scrollRail.style.setProperty('--scroll-progress', `${pct.toFixed(1)}%`);
-    }
+    header?.classList.toggle('is-scrolled', window.scrollY > 36);
   };
 
   window.addEventListener('scroll', updateScroll, { passive: true });
