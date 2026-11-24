@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Kalye 8 — 5v5 3D Street Patintero</title>
+    <meta
+      name="description"
+      content="Five-on-five street patintero in 3D. Crafted in the Philippines for DOST Level Up 3.0 & NSTW 2026."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Open Graph / Social Card -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kalye 8 — 5v5 3D Street Patintero" />
+    <meta property="og:description" content="Five-on-five patintero, back on the neighborhood street." />
+    <meta property="og:image" content="images/card.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kalye 8 — 5v5 3D Street Patintero" />
+    <meta name="twitter:description" content="Five-on-five patintero, back on the neighborhood street." />
+    <meta name="twitter:image" content="images/card.jpg" />
+
+    <!-- Google Fonts: Lilita One (logo), Space Grotesk, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div id="scroll-rail" class="scroll-rail" aria-hidden="true">
+      <div class="scroll-rail__track">
+        <span class="scroll-rail__dot"></span>
+      </div>
+    </div>
+
+    <header id="site-header" class="site-header">
+      <div class="container site-header__inner">
+        <a href="#hero" class="brand" aria-label="Kalye 8 Home">
+          <span class="brand__text">KALYE</span>
+          <img class="brand__mark" src="images/logos/kalye-8.svg" alt="8" />
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#kids" class="site-nav__link">Kids</a>
+          <a href="#skills" class="site-nav__link">Skills</a>
+          <a href="#play" class="site-nav__link">Rules</a>
+          <a href="#booth" class="site-nav__link">Booth</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- 1. ATMOSPHERIC HERO -->
+      <section id="hero" class="hero">
+        <div class="hero__media" aria-hidden="true">
+          <canvas id="hero-map-canvas" class="hero__canvas"></canvas>
+          <div class="hero__vignette"></div>
+        </div>
+
+        <div class="container hero__content">
+          <p class="eyebrow">DOST Level Up 3.0 &middot; NSTW 2026</p>
+          <h1 class="hero__title" aria-label="Kalye 8">
+            <span class="hero__title-word">KALYE</span>
+            <span class="hero__title-eight">
+              <img src="images/logos/kalye-8.svg" alt="8" />
+            </span>
+          </h1>
+          <p class="hero__subtitle">Street patintero, 5v5.</p>
+          <a href="#kids" class="hero__cta">Meet the Kids</a>
+        </div>
+
+        <a href="#kids" class="hero__scroll" aria-label="Scroll to meet the kids">
+          <span>Scroll</span>
+          <span class="hero__scroll-line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <!-- 2. 5V5 CREW SHOWCASE -->
+      <section id="kids" class="section section--kids">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2 class="section-title">Meet the Crew</h2>
+            <p class="section-sub">
+              Customize faces, hair, skin tones, and Filipino outfits for your 5v5 squad.
+            </p>
+          </header>
+
+          <div class="crew-showcase reveal">
+            <div class="crew-stage">
+              <div class="crew-stage__glow" aria-hidden="true"></div>
+              <canvas id="kid-canvas" aria-label="Interactive 3D 5v5 Kalye 8 squad"></canvas>
+              <div id="kid-stage-status" class="kid-stage__status">Loading squad&hellip;</div>
+            </div>
+
+            <div class="crew-bar">
+              <div class="crew-bar__cell">
+                <span class="crew-bar__stat">5v5</span>
+                <p class="crew-bar__text">Mix faces, hair, caps, tops, shorts, and footwear.</p>
+              </div>
+
+              <div class="crew-bar__cell crew-bar__cell--center">
+                <p class="crew-bar__label">Random Lobby Squad</p>
+                <button id="btn-kid-random" class="crew-bar__action" type="button">
+                  Shuffle Team
+                </button>
+              </div>
+
+              <div class="crew-bar__cell">
+                <span class="crew-bar__stat">4 Fits</span>
+                <p class="crew-bar__text">Heritage outfits: Barong, Duster, T&rsquo;boli, and Ifugao.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 10 STREET SKILLS -->
+      <section id="skills" class="section section--skills">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2 class="section-title">Street Skills</h2>
+            <p class="section-sub">Pick two before every match.</p>
+          </header>
+
+          <div class="skills-showcase reveal">
+            <div id="skills-grid" class="skills-grid" role="group" aria-label="10 street skills"></div>
+
+            <aside class="skill-detail" aria-live="polite">
+              <div class="skill-demo">
+                <canvas
+                  id="skill-demo-canvas"
+                  aria-label="Live 3D demonstration of the selected street skill"
+                ></canvas>
+                <div id="skill-demo-status" class="skill-demo__status">Loading demo&hellip;</div>
+                <button
+                  id="btn-skill-replay"
+                  class="skill-demo__replay"
+                  type="button"
+                  aria-label="Replay skill demo"
+                >
+                  Replay
+                </button>
+              </div>
+
+              <div class="skill-detail__body">
+                <div class="skill-detail__head">
+                  <div class="skill-detail__title-wrap">
+                    <img
+                      id="skill-detail-icon"
+                      class="skill-detail__icon"
+                      src="images/skills/nanay-hanger.jpg"
+                      alt="Nanay Hanger"
+                    />
+                    <div>
+                      <h3 id="skill-detail-name" class="skill-detail__name">Nanay Hanger</h3>
+                      <p id="skill-detail-meta" class="skill-detail__meta">18 Energy &middot; Instant Homing</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p id="skill-detail-quip" class="skill-detail__quip">&ldquo;Umuwi ka na, kakain na!&rdquo;</p>
+                <p id="skill-detail-desc" class="skill-detail__desc"></p>
+
+                <div class="skill-detail__tips">
+                  <div class="skill-tip">
+                    <span class="skill-tip__label">As Runner</span>
+                    <span id="skill-detail-lusob" class="skill-tip__text"></span>
+                  </div>
+                  <div class="skill-tip">
+                    <span class="skill-tip__label">As Guard</span>
+                    <span id="skill-detail-bantay" class="skill-tip__text"></span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. HOW TO PLAY -->
+      <section id="play" class="section section--play">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2 class="section-title">How to Play</h2>
+          </header>
+
+          <div class="rules-wrap reveal">
+            <dl class="rules-list">
+              <div class="rule-row">
+                <dt>Goal</dt>
+                <dd>Cross all four chalk lines and make it back home to score. First to 2 of 3 loops wins.</dd>
+              </div>
+              <div class="rule-row">
+                <dt>Guards</dt>
+                <dd>Stay on your chalk line, or the center spine as Patotot. Lunging off your line stuns you for 2 seconds.</dd>
+              </div>
+              <div class="rule-row">
+                <dt>Kulong</dt>
+                <dd>Tagged runners go to jail until a teammate finishes a lap. If all 5 get jailed, sides swap.</dd>
+              </div>
+              <div class="rule-row">
+                <dt>Stamina</dt>
+                <dd>Running drains energy and skills cost 12 to 24. Stand still or use Palamig to recover.</dd>
+              </div>
+              <div class="rule-row">
+                <dt>Hazards</dt>
+                <dd>Watch for passing tricycles, stray dogs, and wet puddles cutting across the street.</dd>
+              </div>
+              <div class="rule-row">
+                <dt>Modes</dt>
+                <dd>Play vs bots, 5v5 with friends, or 1v1 Duel where Tab swaps between all 5 kids.</dd>
+              </div>
+            </dl>
+
+            <div id="controls-strip" class="rules-controls">
+              <span class="rules-controls__label">Controls</span>
+              <p class="rules-controls__text">
+                WASD Move &middot; Space Tag &middot; Q / E Skills &middot; Tab Swap &middot; V Scoreboard
+                <span class="rules-controls__touch">(Touch supported on mobile)</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. BOOTH INVITATION -->
+      <section id="booth" class="section section--booth">
+        <div class="container booth-inner reveal">
+          <p class="eyebrow">November 25&ndash;29, 2026</p>
+          <h2 class="section-title">Play at NSTW 2026</h2>
+
+          <div class="partner-logos">
+            <img
+              src="images/logos/dost.png"
+              alt="Department of Science and Technology"
+              class="partner-logos__img partner-logos__img--dost"
+            />
+            <img
+              src="images/logos/level-up.png"
+              alt="Level Up 3.0 Esports Game Dev Challenge"
+              class="partner-logos__img partner-logos__img--levelup"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <span class="site-footer__brand">Kalye 8</span>
+        <span class="site-footer__meta">DOST Level Up 3.0 &middot; NSTW 2026</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

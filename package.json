@@ -1,0 +1,25 @@
+{
+  "name": "kalye-8-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kalye 8 — DOST Level Up 3.0 & NSTW 2026 Cup Official Showcase Landing Page",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/three": "^0.170.0",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.0",
+    "vitest": "^2.1.5"
+  }
+}

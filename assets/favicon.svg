@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 0 120 120">
+  <title>Kalye 8</title>
+  <defs>
+    <linearGradient id="footbed" x1="45" y1="6" x2="45" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fbeedd" />
+      <stop offset="0.55" stop-color="#f5dec9" />
+      <stop offset="1" stop-color="#e3c3a3" />
+    </linearGradient>
+    <linearGradient id="strap" x1="20" y1="20" x2="70" y2="65" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5b87f5" />
+      <stop offset="0.45" stop-color="#4474e8" />
+      <stop offset="1" stop-color="#3159c4" />
+    </linearGradient>
+  </defs>
+
+  <!-- The "8" slipper from the home screen: two lobes (heel and toe) with the holes of the 8, a Y-strap on top. -->
+  <!-- dark rubber outsole -->
+  <path fill="#0f172a" fill-rule="evenodd" d="M 45,10 C 68,10 82,22 82,40 C 82,54 74,62 67,66 C 76,71 85,81 85,94 C 85,110 68,120 45,120 C 22,120 5,110 5,94 C 5,81 14,71 23,66 C 16,62 8,54 8,40 C 8,22 22,10 45,10 Z M 45,26 C 54,26 61,32 61,40 C 61,48 54,54 45,54 C 36,54 29,48 29,40 C 29,32 36,26 45,26 Z M 45,76 C 56,76 64,84 64,94 C 64,104 56,112 45,112 C 34,112 26,104 26,94 C 26,84 34,76 45,76 Z" />
+  <!-- blue cushion stripe -->
+  <path fill="#1d4ed8" fill-rule="evenodd" d="M 45,8 C 67,8 80,20 80,38 C 80,52 72,60 65,64 C 74,69 83,79 83,92 C 83,108 66,118 45,118 C 24,118 7,108 7,92 C 7,79 16,69 25,64 C 18,60 10,52 10,38 C 10,20 23,8 45,8 Z M 45,24 C 53,24 60,30 60,38 C 60,46 53,52 45,52 C 37,52 30,46 30,38 C 30,30 37,24 45,24 Z M 45,74 C 55,74 63,82 63,92 C 63,102 55,110 45,110 C 35,110 27,102 27,92 C 27,82 35,74 45,74 Z" />
+  <!-- cream footbed -->
+  <path fill="url(#footbed)" stroke="#ffffff" stroke-width="1" fill-rule="evenodd" d="M 45,6 C 66,6 78,18 78,36 C 78,50 70,58 63,62 C 72,67 81,77 81,90 C 81,106 65,116 45,116 C 25,116 9,106 9,90 C 9,77 18,67 27,62 C 20,58 12,50 12,36 C 12,18 24,6 45,6 Z M 45,22 C 52,22 59,28 59,36 C 59,44 52,50 45,50 C 38,50 31,44 31,36 C 31,28 38,22 45,22 Z M 45,72 C 54,72 62,80 62,90 C 62,100 54,108 45,108 C 36,108 28,100 28,90 C 28,80 36,72 45,72 Z" />
+  <!-- blue Y-strap, a little bolder than on the home screen so it still reads at tab size -->
+  <g fill="url(#strap)" stroke="#1e40af" stroke-width="3" stroke-linejoin="round">
+    <path d="M 45,20 C 37,24 23,38 12,54 C 11,56 12,59 15,59 C 18,59 28,48 46,26 Z" />
+    <path d="M 45,20 C 53,24 67,38 78,54 C 79,56 78,59 75,59 C 72,59 62,48 44,26 Z" />
+  </g>
+  <circle cx="45" cy="20" r="6" fill="#1e40af" />
+  <circle cx="45" cy="19.5" r="4.4" fill="url(#strap)" />
+  <circle cx="45" cy="18.5" r="1.7" fill="#93c5fd" />
+</svg>
